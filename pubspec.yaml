@@ -35,10 +35,18 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   http:
+  json_annotation: ^4.9.0
+  freezed_annotation: ^2.4.1
+  flutter_bloc:
+  equatable:
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  build_runner: ^2.4.11
+  json_serializable: ^6.8.0
+  freezed: ^2.5.2  #1 dart run build_runner build
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

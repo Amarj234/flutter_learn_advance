@@ -1,7 +1,8 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:learn_more/api/api_retry.dart';
+import 'other/custom_rander_box/render_widget.dart';
+
 
 void main() => runApp(const MyApp());
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MyAppData(
       notifier: MyAppNotifier(),
       child: const MaterialApp(
-        home: MyHomePage(),
+        home: RadialExample(),
       ),
     );
   }
@@ -48,7 +49,7 @@ class MyAppData extends InheritedWidget {
   @override
   bool updateShouldNotify(MyAppData oldWidget) {
     return notifier != oldWidget.notifier;
-    [].length;
+
   }
 }
 

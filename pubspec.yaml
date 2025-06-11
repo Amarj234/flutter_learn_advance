@@ -38,7 +38,6 @@ dependencies:
   json_annotation:
   freezed_annotation:
   flutter_bloc:
-  equatable:
   flutter_riverpod:
   provider:
   http_interceptor:

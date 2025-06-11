@@ -1,10 +1,8 @@
 
 
-import 'package:equatable/equatable.dart';
+// this file is part of the flutter_architecture project
 
-
-
-class MyResult<T> extends Equatable{
+class MyResult<T> {
   final T? value;
   final String? error;
   final ScreenState state;

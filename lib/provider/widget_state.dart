@@ -12,6 +12,16 @@ class WidgetState extends StatefulWidget {
 class _WidgetStateState extends State<WidgetState> {
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      // Fetch user data when the widget is built
+      context.read<ProviderClass>().fetchUser();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
   //  final state = context.watch<ProviderClass>().state;
     return Scaffold(

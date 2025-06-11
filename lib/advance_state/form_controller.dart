@@ -20,6 +20,7 @@ class LoginFormController {
 void main(){
 
   final form = LoginFormController();
+  form.email.value="aaa@gm.cm";
 
   if (form.validate()) {
     print('Form is valid!');

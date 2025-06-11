@@ -39,6 +39,7 @@ dependencies:
   freezed_annotation: ^2.4.1
   flutter_bloc:
   equatable:
+  flutter_riverpod: 
 
 
 dev_dependencies:

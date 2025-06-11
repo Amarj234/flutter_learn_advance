@@ -44,6 +44,7 @@ dependencies:
   http_interceptor:
   get:
   rxdart:
+  google_fonts:
 
 
 dev_dependencies:

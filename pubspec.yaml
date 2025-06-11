@@ -43,6 +43,7 @@ dependencies:
   provider:
   http_interceptor:
   get:
+  rxdart:
 
 
 dev_dependencies:

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'color_theme.dart';
 import 'app_colors.dart';
 import 'app_dimens.dart';
 
@@ -252,12 +253,12 @@ class MyThemes {
     );
   }
 
-  // static BoxShadow getTopShadow(BuildContext context) {
-  //   return  BoxShadow(
-  //     color: AppColors.topShadowColor(context),
-  //     spreadRadius: 0,
-  //     blurRadius: 20,
-  //     offset: Offset(0, -1),
-  //   );
-  // }
+  static BoxShadow getTopShadow(BuildContext context) {
+    return  BoxShadow(
+      color: AppColors.topShadowColor(context),
+      spreadRadius: 0,
+      blurRadius: 20,
+      offset: Offset(0, -1),
+    );
+  }
 }

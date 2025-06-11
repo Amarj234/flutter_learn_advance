@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:learn_more/oop/api_retry.dart';
+import 'package:learn_more/api/api_retry.dart';
 
 void main() => runApp(const MyApp());
 

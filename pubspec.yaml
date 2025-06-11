@@ -41,6 +41,7 @@ dependencies:
   equatable:
   flutter_riverpod:
   provider:
+  http_interceptor: 
 
 
 dev_dependencies:

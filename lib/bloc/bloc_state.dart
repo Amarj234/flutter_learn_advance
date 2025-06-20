@@ -1,6 +1,5 @@
-
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:learn_more/other/my_result.dart';
+import 'package:learn_more/api/my_result.dart';
 part 'bloc_state.freezed.dart';
 
 // @freezed
@@ -15,15 +14,14 @@ part 'bloc_state.freezed.dart';
 
 // another way to define BlocState
 
-
 @freezed
 sealed class BlocStateClass with _$BlocStateClass {
   const BlocStateClass._();
-    factory BlocStateClass.initial()=> _BlocStateClass();
+  factory BlocStateClass.initial() => _BlocStateClass();
 
- factory  BlocStateClass({
-     @Default([]) List<String> items,
-     @Default(false) bool  isLoading,
-   @Default("") String errorMessage,
-   }) = _BlocStateClass;
- }
+  factory BlocStateClass({
+    @Default([]) List<String> items,
+    @Default(false) bool isLoading,
+    @Default("") String errorMessage,
+  }) = _BlocStateClass;
+}

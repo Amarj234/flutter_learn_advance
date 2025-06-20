@@ -1,1 +1,18 @@
+void main() {
+  final myList = [1, 2, 3, 4];
+
+myList.any((e) {
+    print(e);          // Prints the element
+    return e > 2;       // Returns a boolean for `.any()`
+  });
+}
+
+class MyList<T> with Iterable<T> {
+  final List<T> _data;
+
+  MyList(this._data);
+
+  @override
+  Iterator<T> get iterator => _data.iterator;
+}
 

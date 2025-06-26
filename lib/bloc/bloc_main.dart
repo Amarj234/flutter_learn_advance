@@ -10,19 +10,20 @@ class BlocMain extends Bloc<BlocEvent,BlocStateClass> {
   }
 
 
-  _loadFunction(Load event, Emitter<BlocStateClass> emit) {
+  _loadFunction(Load event, Emitter<BlocStateClass> emit) async{
 
     // Simulate a loading process
      emit(state.copyWith(
      isLoading: true,
       errorMessage: '',
     ));
-    Future.delayed(Duration(seconds: 2), () {
+  await  Future.delayed(Duration(seconds: 2));
+    if (emit.isDone) return;
       // After loading, emit the loaded state with some dummy data
       emit(state.copyWith(
         items: ['Item 1', 'Item 2', 'Item 3'],
         isLoading: false,
       ));
-    });
+    
   }
 }

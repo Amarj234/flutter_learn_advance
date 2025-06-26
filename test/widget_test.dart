@@ -77,4 +77,35 @@ void main() {
     expect(find.text('Item 3'), findsOneWidget);
   });
 
+
+ testWidgets('golden test with real BlocMain in loaded state', (WidgetTester tester) async {
+    // Use real BlocMain
+    final bloc = BlocMain();
+
+    // Emit loaded state manually
+    bloc.emit(BlocStateClass(
+      isLoading: false,
+      items: ['Alpha', 'Beta', 'Gamma'],
+      errorMessage: '',
+    ));
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: BlocProvider<BlocMain>.value(
+          value: bloc,
+          child:  custom_widget.WidgetState(),
+        ),
+      ),
+    );
+
+    await tester.pumpAndSettle();
+
+    // Golden comparison
+    await expectLater(
+      find.byType(WidgetState),
+      matchesGoldenFile('goldenImage/widget_state_loaded.png'),
+    );
+  });
+  
+
 }

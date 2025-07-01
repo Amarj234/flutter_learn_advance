@@ -44,6 +44,7 @@ dependencies:
   get:
   rxdart:
   google_fonts:
+  go_router:
 
 
 dev_dependencies:

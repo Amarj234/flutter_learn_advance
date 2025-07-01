@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:learn_more/api/api_retry.dart';
+import 'package:learn_more/other/route/app_routes.dart';
 import 'other/custom_rander_box/render_widget.dart';
 import "dart:math"as math;
 
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyAppData(
       notifier: MyAppNotifier(),
-      child: const MaterialApp(
-        home: RadialExample(),
+      child: MaterialApp.router(
+        routerConfig: AppRouters().router,
       ),
     );
   }

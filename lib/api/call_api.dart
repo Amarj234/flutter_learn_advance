@@ -29,6 +29,7 @@ class ServerConnection {
       {required String version, Map<String, String>? map}) async {
     var check = {"Content-Type": "application/json", "x-version": "$version"};
     var token = "";// await SPManager.instance.token;
+    // ignore: unnecessary_null_comparison
     if (token != null) check["authorization"] = "Bearer $token";
     if (map != null) check.addAll(map);
     return check;

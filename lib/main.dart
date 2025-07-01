@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_more/api/api_retry.dart';
 import 'other/custom_rander_box/render_widget.dart';
-
+import "dart:math"as math;
 
 void main() => runApp(const MyApp());
 
@@ -25,6 +25,7 @@ class MyAppNotifier extends ChangeNotifier {
   int get counter => _counter;
 
   void increment() {
+
     fetchData();
     _counter++;
     notifyListeners();

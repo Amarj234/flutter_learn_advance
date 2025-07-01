@@ -7,7 +7,7 @@ class AuthenticationRepository {
 
   Stream<AuthenticationStatus> get status async* {
     var token ="use local storage or any other method to get token";
-    if (token?.isEmpty == false) {
+    if (token.isEmpty == false) {
       yield AuthenticationStatus.authenticated;
     } else {
       yield AuthenticationStatus.unauthenticated;

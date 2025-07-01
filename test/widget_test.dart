@@ -46,6 +46,8 @@ void main() {
       (WidgetTester tester) async {
     final bloc = BlocMain();
 
+    // await tester.tap(find.byType(WidgetState));
+
     // Wrap your widget with the real BlocProvider
     await tester.pumpWidget(
       MaterialApp(

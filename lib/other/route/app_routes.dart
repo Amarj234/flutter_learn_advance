@@ -65,6 +65,7 @@ class AppRouters {
   /* -------------------------------------------------------------------------- */
 
   final GoRouter router = GoRouter(
+    
     navigatorKey: rootKey,
     // observers: [GoRouteObserver()],
     initialLocation:
@@ -104,14 +105,15 @@ class AppRouters {
 
       GoRoute(
         name: mkyWidget,
-        path: '/$mkyWidget',
+        path: '/$mkyWidget:id',
         parentNavigatorKey: rootKey,
         builder: (context, state) {
           final extra = state.extra as Map<String, dynamic>? ?? {};
+             final userId = state.pathParameters['id']; //
           return MyWidget(
             message: extra['message'],
             count: extra['count'],
-          );
+          );                                       
         },
       ),
    
@@ -144,3 +146,37 @@ class AppRouters {
     ],
   );
 }
+
+
+
+// GoRoute(
+//   path: '/profile/:id',
+//   name: 'profile',
+//   builder: (context, state) {
+//     final id = state.pathParameters['id'];
+//     final tab = state.queryParameters['tab'];
+//     return ProfileScreen(userId: id!, selectedTab: tab);
+//   },
+// )
+
+
+
+// context.goNamed(
+//   'profile',
+//   params: {'id': '42'},            // for :id
+//   queryParams: {'tab': 'posts'},    // ?tab=posts
+// );
+
+
+
+// context.go('/profile/42?tab=posts');
+
+
+
+// | Method                      | Description                                                                     |
+// | --------------------------- | ------------------------------------------------------------------------------- |
+// | `context.push(...)`         | Like `go`, but **keeps current location on the stack** (like `Navigator.push`). |
+// | `context.pushNamed(...)`    | Same as `push`, but by route `name`.                                            |
+// | `context.replace(...)`      | Like `go`, but explicitly replaces current history entry.                       |
+// | `context.replaceNamed(...)` | Same but by `name`.                                                             |
+// | `context.pop()`             | Pops the last route off the stack (like `Navigator.pop`).                       |

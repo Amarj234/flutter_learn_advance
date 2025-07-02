@@ -51,7 +51,6 @@ CustomTransitionPage fadeTransitionPage({
 
 class AppRouters {
   static final rootKey = GlobalKey<NavigatorState>();
-  static final _bottomNavShellKey = GlobalKey<NavigatorState>();
 
   /* -------------------------------------------------------------------------- */
   /*                                  PAGE PATH                                 */
@@ -69,9 +68,8 @@ class AppRouters {
     navigatorKey: rootKey,
     // observers: [GoRouteObserver()],
     initialLocation:
-        true
-            ? '/$dashboard'
-            : '/$login',
+        '/$dashboard',
+       
    // debugLogDiagnostics: AppConstants.isDebugMode,
    // errorBuilder: (context, state) => const PageNotFoundPage(),
     routes: [
@@ -112,7 +110,7 @@ class AppRouters {
              final userId = state.pathParameters['id']; //
           return MyWidget(
             message: extra['message'],
-            count: extra['count'],
+            count: extra['count']?? userId,
           );                                       
         },
       ),

@@ -28,6 +28,7 @@ class EquatableState extends Equatable {
   List<Object?> get props => [items, isLoading, errorMessage];
 }
 
+//🚀 🔥 freezed vs Equatable for State
 
 // | Feature                           | `Equatable`                                    | `freezed`                                                                   |
 // | --------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------- |

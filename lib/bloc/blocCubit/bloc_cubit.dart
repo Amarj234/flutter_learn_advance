@@ -1,16 +1,13 @@
 
-
-
-
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learn_more/bloc/bloc.dart';
+import 'package:learn_more/bloc/blocCubit/equatable_state.dart';
 
 
 // if you use cubit then you not need a event class 
 // with Cubit we need only State class 
 
-class BlocCubit extends Cubit<BlocStateClass>{
-BlocCubit():super(BlocStateClass.initial());
+class BlocCubit extends Cubit<EquatableState>{
+BlocCubit():super(EquatableState());
 
 void loadData()async{
 

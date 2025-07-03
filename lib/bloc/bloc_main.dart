@@ -9,6 +9,8 @@ class BlocMain extends Bloc<BlocEvent,BlocStateClass> {
     on<Load>(_loadFunction);
   }
 
+  
+
 
   _loadFunction(Load event, Emitter<BlocStateClass> emit) async{
 

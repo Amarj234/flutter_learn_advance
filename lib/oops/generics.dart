@@ -38,4 +38,31 @@ void main() {
 
   var box = Box2<int, String>(10, "Hello");
   box.show();
+
+
+    var test=Genetic.test( 10);
+  print(test.val);//print 10
+
+}
+
+
+class Genetic<T>{
+  T val;
+  Genetic({required this.val});
+  
+factory Genetic.test(int v) => Genetic <T>(val:v as T ); // create subclass of main class
+
+
+factory Genetic.pest(int v) {
+    // You can decide when to return a special subclass
+    if (v > 5) {
+      
+      return Genetic<T>(val: "String" as T);
+    } else if(10<v){
+      return  Genetic.test(v);
+    }else{
+        
+      return Genetic<T>(val:v as T);
+    }
+  }
 }

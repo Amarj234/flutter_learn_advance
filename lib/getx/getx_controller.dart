@@ -6,7 +6,7 @@ enum UserStatus { initial, loading, success, error }
 
 class UserController extends GetxController {
   var user = Rxn<User>();
-  var status = UserStatus.initial.obs;
+  Rx<UserStatus> status = UserStatus.initial.obs;
   var errorMessage = ''.obs;
 
   void fetchUser() async {

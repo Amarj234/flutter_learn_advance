@@ -46,7 +46,8 @@ dependencies:
   google_fonts:
   go_router:
   get_it: ^8.0.3
-  equatable: 
+  equatable: ^2.0.5
+
 
 
 dev_dependencies:

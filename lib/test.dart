@@ -53,7 +53,7 @@ final body = jsonEncode({
           "Use 'text' key for Text, ElevatedButton, and Button labels. "
           "Available widget types: Column, Row, Text, TextField, Slider, Switch, "
           "Checkbox, Radio, Image, Button, ElevatedButton, Icon, Divider, Spacer, "
-          "Card, Container, ListView, GridView, DropdownButton. "
+          "Card, Container, ListView, GridView,BottomNavigationBar, DropdownButton. "
           "Include properties like padding, margin, color, backgroundColor, etc."
         }
       ]
@@ -323,6 +323,14 @@ EdgeInsets? _parseEdgeInsets(dynamic val) {
     }
   }
 
+  void handleAction(dynamic action, [dynamic param]) {
+    // You can implement custom logic here based on your needs.
+    // For now, just show a SnackBar with the action and param.
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Action: $action, Param: $param')),
+    );
+  }
+
   Widget buildWidget(dynamic node) {
     if (node == null || node is! Map) return SizedBox.shrink();
 
@@ -354,6 +362,23 @@ Color? bgColor = _parseColor(node['backgroundColor']);
 final width = _parseDimension(node['width']);
 final height = _parseDimension(node['height']);
 
+EdgeInsets parsePadding(dynamic padding) {
+  if (padding == null) return EdgeInsets.zero;
+
+  if (padding is num) {
+    // uniform
+    return EdgeInsets.all(padding.toDouble());
+  }
+  if (padding is Map) {
+    return EdgeInsets.only(
+      left: (padding["left"] ?? 0).toDouble(),
+      top: (padding["top"] ?? 0).toDouble(),
+      right: (padding["right"] ?? 0).toDouble(),
+      bottom: (padding["bottom"] ?? 0).toDouble(),
+    );
+  }
+  return EdgeInsets.zero;
+}
 
     final alignment = _parseAlignment(node['alignment']);
     final visible = node['visible'] ?? true;
@@ -400,32 +425,39 @@ final height = _parseDimension(node['height']);
         );
         break;
 
-      case 'textfield':
-        final fieldKey = key ?? 'textfield_${node['label']}';
-        core = TextField(
-          key: Key(fieldKey),
-     controller: controllers.putIfAbsent(fieldKey, () =>
-    TextEditingController(text: stateValues[fieldKey]?.toString())),
-          decoration: InputDecoration(
-            labelText: node['label']?.toString(),
-            hintText: node['placeholder']?.toString(),
-            filled: node['filled'] ?? true,
-            fillColor: _parseColor(node['fillColor']) ?? Colors.grey[100],
-            border: OutlineInputBorder(
-              borderRadius: borderRadius ?? BorderRadius.circular(8),
-            ),
-            prefixIcon: node['prefixIcon'] != null ? Icon(_parseIcon(node['prefixIcon'])) : null,
-            suffixIcon: node['suffixIcon'] != null ? Icon(_parseIcon(node['suffixIcon'])) : null,
-          ),
-          obscureText: node['obscureText'] ?? false,
-          keyboardType: _parseKeyboardType(node['keyboardType']),
-          onChanged: (val) {
-            setState(() {
-              stateValues[fieldKey] = val;
-            });
-          },
-        );
-        break;
+     case 'textfield':
+  final fieldKey = key ?? 'textfield_${node['label']}';
+  core = TextField(
+    key: Key(fieldKey),
+    controller: controllers.putIfAbsent(
+      fieldKey, 
+      () => TextEditingController(text: stateValues[fieldKey]?.toString())
+    ),
+    decoration: InputDecoration(
+      labelText: node['label']?.toString(),
+      hintText: node['placeholder']?.toString(),
+      filled: node['filled'] is bool ? node['filled'] : true,
+      fillColor: _parseColor(node['fillColor']) ?? Colors.grey[100],
+      border: OutlineInputBorder(
+        borderRadius: borderRadius ?? BorderRadius.circular(8),
+      ),
+      prefixIcon: node['prefixIcon'] != null 
+          ? Icon(_parseIcon(node['prefixIcon'])) 
+          : null,
+      suffixIcon: node['suffixIcon'] != null 
+          ? Icon(_parseIcon(node['suffixIcon'])) 
+          : null,
+    ),
+    obscureText: node['obscureText'] ?? false,
+    keyboardType: _parseKeyboardType(node['keyboardType']),
+    onChanged: (val) {
+      setState(() {
+        stateValues[fieldKey] = val;
+      });
+    },
+  );
+  break;
+
 
       case 'slider':
         final sliderKey = key ?? 'slider_${node['label']}';
@@ -501,6 +533,29 @@ final height = _parseDimension(node['height']);
           ],
         );
         break;
+
+   case "GridView":
+      return GridView.count(
+        crossAxisCount: node["gridDelegate"]?["crossAxisCount"] ?? 2,
+        childAspectRatio: (node["gridDelegate"]?["childAspectRatio"] ?? 1.0).toDouble(),
+        crossAxisSpacing: (node["gridDelegate"]?["crossAxisSpacing"] ?? 0).toDouble(),
+        mainAxisSpacing: (node["gridDelegate"]?["mainAxisSpacing"] ?? 0).toDouble(),
+        padding: parsePadding(node["padding"]),
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        children: (node["children"] as List).map<Widget>((child) => buildWidget(child)).toList(),
+      );
+      case 'gridview':
+        core = GridView.count(
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          crossAxisCount: (node['crossAxisCount'] ?? 2) as int,
+          childAspectRatio: (node['childAspectRatio'] ?? 1).toDouble(),
+          children: children.map((child) => buildWidget(child)).toList(),
+        );
+
+  break;
+
 
       case 'image':
         core = ClipRRect(
@@ -609,23 +664,42 @@ final height = _parseDimension(node['height']);
         );
         break;
 
-      case 'listview':
-        core = ListView(
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          children: children.map((child) => buildWidget(child)).toList(),
-        );
-        break;
+  case 'listview':
+  if (node.containsKey('builder')) {
+    final builder = node['builder'];
+    final itemCount = builder['itemCount'] ?? 10;
+    final itemBuilderJson = builder['itemBuilder'];
+    core = ListView.builder(
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      itemCount: itemCount,
+      itemBuilder: (context, index) => buildWidget(itemBuilderJson),
+    );
+  } else {
+    core = ListView(
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      children: children.map((child) => buildWidget(child)).toList(),
+    );
+  }
+  break;
 
-      case 'gridview':
-        core = GridView.count(
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          crossAxisCount: (node['crossAxisCount'] ?? 2) as int,
-          childAspectRatio: (node['childAspectRatio'] ?? 1).toDouble(),
-          children: children.map((child) => buildWidget(child)).toList(),
-        );
-        break;
+case "bottomnavigationbar":
+  core = BottomNavigationBar(
+    currentIndex: node["currentIndex"] ?? 0,
+    onTap: (index) {
+      handleAction(node["onTap"], index);
+    },
+    items: (node["items"] as List).map((item) => 
+      BottomNavigationBarItem(
+        icon: Icon(_parseIcon(item["icon"])),
+        label: item["label"]
+      )
+    ).toList(),
+  );
+  break;
+
+
 
       case 'dropdownbutton':
         final dropdownKey = key ?? 'dropdown_${node['label']}';

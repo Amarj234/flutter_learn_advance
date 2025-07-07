@@ -581,7 +581,7 @@ EdgeInsets parsePadding(dynamic padding) {
             fontSize: (node['fontSize'] ?? 16).toDouble(),
             fontWeight: _parseFontWeight(node['weight']) ?? FontWeight.normal,
           ),
-          padding: _parseEdgeInsets(node['padding']) ?? EdgeInsets.symmetric(vertical: 14, horizontal: 20),
+          padding: _parseEdgeInsets(node['padding']) ?? EdgeInsets.zero,
           shape: RoundedRectangleBorder(
             borderRadius: borderRadius ?? BorderRadius.circular(8),
           ),
@@ -748,7 +748,7 @@ case "bottomnavigationbar":
         padding: padding,
         margin: margin,
         decoration: BoxDecoration(
-          color: bgColor,
+       //   color: bgColor,
           borderRadius: borderRadius,
         ),
         child: result,

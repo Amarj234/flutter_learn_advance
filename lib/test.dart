@@ -188,6 +188,7 @@ class _DynamicUIPageState extends State<DynamicUIPage> {
     );
   }
 void _showJson(BuildContext context) {
+  final dartCode = buildWidgetCode(widget.jsonData);
 
   showDialog(
     context: context,
@@ -195,7 +196,7 @@ void _showJson(BuildContext context) {
       title: Text("Generated Dart Code"),
       content: SingleChildScrollView(
         child: SelectableText(
-          JsonEncoder.withIndent('  ').convert(widget.jsonData),
+          dartCode,
           style: TextStyle(fontFamily: 'monospace'),
         ),
       ),
@@ -208,6 +209,62 @@ void _showJson(BuildContext context) {
     ),
   );
 }
+
+
+
+String buildWidgetCode(dynamic node, {int indent = 0}) {
+  final String tab = '  ' * indent;
+  if (node == null || node is! Map) return '';
+
+  final type = node['type']?.toString()?.toLowerCase();
+  final children = (node['children'] ?? []) as List;
+  final key = node['key']?.toString();
+
+  switch (type) {
+    case 'column':
+      final childrenCode = children
+          .map((child) => buildWidgetCode(child, indent: indent + 2))
+          .join(',\n');
+      return '''${tab}Column(
+${tab}  children: [
+$childrenCode
+${tab}  ],
+${tab})''';
+
+    case 'text':
+      return '''${tab}Text(
+${tab}  "${node['text'] ?? ''}",
+${tab}  style: TextStyle(
+${tab}    fontSize: ${(node['fontSize'] ?? 16).toDouble()},
+${tab}    fontWeight: FontWeight.${(node['weight'] ?? 'normal')},
+${tab}    color: ${_colorCode(node['color'])},
+${tab}  ),
+${tab})''';
+
+    case 'textfield':
+      return '''${tab}TextField(
+${tab}  decoration: InputDecoration(
+${tab}    labelText: "${node['label'] ?? ''}",
+${tab}    prefixIcon: Icon(Icons.${node['prefixIcon'] ?? 'email'}),
+${tab}  ),
+${tab})''';
+
+    case 'elevatedbutton':
+      return '''${tab}ElevatedButton(
+${tab}  onPressed: () {},
+${tab}  child: Text("${node['text'] ?? 'Button'}"),
+${tab})''';
+
+    default:
+      return '${tab}Container()';
+  }
+}
+
+String _colorCode(dynamic color) {
+  if (color == null) return 'null';
+  return 'Color(0x${color.toString().replaceAll("#", "")})';
+}
+
 
 
 
@@ -777,7 +834,12 @@ case "bottomnavigationbar":
 
   IconData? _parseIcon(dynamic icon) {
     if (icon is String) {
-      switch (icon.toLowerCase()) {
+        final cleaned = icon.toLowerCase()
+      .replaceAll('icon(', '')
+      .replaceAll('icons.', '')
+      .replaceAll(')', '')
+      .trim();
+      switch (cleaned) {
         case 'home': return Icons.home;
         case 'settings': return Icons.settings;
         case 'person': return Icons.person;

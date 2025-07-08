@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 
+void main() {
+  runApp(MaterialApp(home:FlipCardDemo()));
+  
+}
+
+
 class FlipCardDemo extends StatefulWidget {
   const FlipCardDemo({super.key});
 
@@ -33,8 +39,8 @@ class _FlipCardDemoState extends State<FlipCardDemo> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
-    final animation = Tween<double>(begin: 0, end: 1).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+    Animation<double> animation = Tween<double>(begin: 0, end: 1).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.slowMiddle),
     );
 
     return Scaffold(

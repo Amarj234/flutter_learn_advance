@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+
+void main() {
+
+  runApp(MaterialApp(home: MyAnimationWidget(),));
+  
+}
+
 class MyAnimationWidget extends StatefulWidget {
   @override
   _MyAnimationWidgetState createState() => _MyAnimationWidgetState();
@@ -18,7 +25,7 @@ class _MyAnimationWidgetState extends State<MyAnimationWidget>
       duration: Duration(seconds: 1),
     );
 
-    _scaleAnimation = Tween<double>(begin: 0.5, end: 1.5)
+    _scaleAnimation = Tween<double>(begin: 0.01, end: .5)
         .animate(CurvedAnimation(parent: _controller, curve: Curves.elasticOut));
 
     _controller.repeat(reverse: true);

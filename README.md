@@ -74,7 +74,7 @@ A complete Flutter & Dart learning repository by Amarjeet Kushwaha, exploring ad
 
 ## run separate file
 - To run a specific file, use:
-![App Screenshot](https://raw.githubusercontent.com/Amarj234/flutter_learn_advance/screenshots/Screenshot_2025-07-08_165856.png)
+![App Screenshot](https://raw.githubusercontent.com/Amarj234/flutter_learn_advance/refs/heads/main/screenshorts/Screenshot_2025-07-08_165856.png)
 
 > _Place your screenshot images in the `screenshots/` folder and update the path above as needed._
 

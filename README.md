@@ -72,6 +72,14 @@ A complete Flutter & Dart learning repository by Amarjeet Kushwaha, exploring ad
 
 ---
 
+## run separate file
+- To run a specific file, use:
+![App Screenshot](screenshots/Screenshot 2025-07-08 165856.png)
+
+> _Place your screenshot images in the `screenshots/` folder and update the path above as needed._
+
+
+
 ## 🚀 How to Run
 
 ```bash

@@ -77,7 +77,10 @@ class RenderRadialProgress extends RenderBox {
     canvas.drawCircle(center, radius, backgroundPaint);
 
     // Arc for Progress
-    final rect = Rect.fromCircle(center: center, radius: radius);
+    final rect = Rect.fromPoints(
+      Offset(center.dx - radius, center.dy - radius),
+      Offset(center.dx + radius, center.dy + radius),
+    );
     final sweepAngle = 2 * pi * progress;
     canvas.drawArc(rect, -pi / 2, sweepAngle, false, progressPaint);
   }

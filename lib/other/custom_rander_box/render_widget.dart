@@ -1,6 +1,28 @@
 import 'package:flutter/material.dart';
 import 'render_radial_progress.dart';
 
+
+
+
+
+
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: RadialExample(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+    ),
+  );
+}
+
+
+
+
+
+
 class RadialExample extends StatefulWidget {
   const RadialExample({super.key});
 

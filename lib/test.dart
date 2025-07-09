@@ -1,49 +1,52 @@
 import 'package:flutter/material.dart';
 
 
-void main() {
-  runApp(MaterialApp(home:MyWidget()));
+main(){
+  runApp(MaterialApp(home:Mywidget()));
 }
 
+class Mywidget extends StatefulWidget {
+  @override
+  State<Mywidget> createState() => _Mywidget();
+}
 
-class MyWidget extends StatefulWidget { 
-  
+class _Mywidget extends State<Mywidget> with SingleTickerProviderStateMixin {
+  late AnimationController _animationController;
+  late Animation<double> _animation;
 
   @override
-State<MyWidget> createState()=> _MyWidgetState();
-
-
- }
-
-class _MyWidgetState extends State<MyWidget> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _sizeAnim;
-
-  @override
-  void initState() {
+  initState() {
     super.initState();
-    _controller = AnimationController(duration: Duration(seconds: 5), vsync: this);
-    _sizeAnim = Tween<double>(begin: 10, end: 2000).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
-    _controller.repeat(reverse: true);
+    _animationController =
+        AnimationController(vsync: this, duration: Duration(seconds: 10));
+
+    _animation = Tween<double>(begin: 1, end: .01).animate(_animationController);
+
+    _animationController.repeat(reverse: true);
   }
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (_, __) {
-        return Container(
-          width: _sizeAnim.value,
-          height: _sizeAnim.value,
-          color: Colors.green,
-        );
-      },
-    );
-  }
+    return Scaffold(
+        body: SafeArea(
+      child: AnimatedBuilder(
+        animation: _animationController,
+        builder: (context, child) {
+          print("build ${_animation.value}");
+          return Stack(
+            children: [
+              Positioned(
+                top:  _animation.value*500,
+                
+                            left: _animation.value*1000,// shows 70% height
+                child: Image.asset("assets/amarjeet.jpg"),
+              ),
+            ],
+          )
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
+;
+        },
+      ),
+    ));
   }
 }

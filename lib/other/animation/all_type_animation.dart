@@ -20,6 +20,43 @@ class _AnimationDemoPageState extends State<AnimationDemoPage>
   late Animation<Alignment> _alignAnimation;
   late Animation<RelativeRect> _positionedAnimation;
   late Animation<Decoration> _decorationAnimation;
+//  late Animation<CurvedAnimation> _curvedAnimation;
+
+  // Offset a = Offset(10, 5);
+// Offset b = Offset(3, 2);
+
+// Offset sum = a + b;   // Offset(13,7)
+// Offset diff = a - b;  // Offset(7,3)
+// Offset scaled = a.scale(2, 3); // Offset(20,15)
+// double len = a.distance; // sqrt(10^2 + 5^2) ≈ 11.18
+
+// | Tween type          | Use                                       |
+// | ------------------- | ----------------------------------------- |
+// | `Tween<double>`     | Numbers (opacity, scale)                  |
+// | `ColorTween`        | Colors                                    |
+// | `AlignmentTween`    | Align widget in a container               |
+// | `SizeTween`         | Animate size                              |
+// | `RectTween`         | Animate rectangles                        |
+// | `RelativeRectTween` | Animate positioned widgets inside `Stack` |
+// | `DecorationTween`   | Animate `BoxDecoration`                   |
+// | `EdgeInsetsTween`   | Animate padding or margin                 |
+// | `BorderRadiusTween` | Animate border radius                     |
+// | `IntTween`          | Animate integers                          |
+// | `OffsetTween`       | Animate `Offset` for positions/slides     |
+
+
+
+// | Animation type           | Used for                                          |
+// | ------------------------ | ------------------------------------------------- |
+// | `CurvedAnimation`        | Apply a curve (bounce, ease) to another animation |
+// | `Tween<T>.animate()`     | Interpolate values of type `T` over time          |
+// | `ReverseAnimation`       | Play another animation backwards                  |
+// | `TrainHoppingAnimation`  | Seamlessly switch between two animations          |
+// | `AlwaysStoppedAnimation` | Fixed value, never changes                        |
+// | `ProxyAnimation`         | Swap animation sources at runtime                 |
+
+
+
 
   @override
   void initState() {
@@ -170,6 +207,26 @@ class _AnimationDemoPageState extends State<AnimationDemoPage>
                   child: Text("Decorate", style: TextStyle(color: Colors.white)),
                 ),
               ),
+
+
+//               AnimatedBuilder(
+//         animation: _controller,
+//         builder: (context, child) {
+//           print("build ${_animation.value}");
+//           return Stack(
+//             children: [
+//               Positioned(
+//                 top:  _animation.value*500,
+                
+//                             left: _animation.value*1000,// shows 70% height
+//                 child: Image.asset("assets/amarjeet.jpg"),
+//               ),
+//             ],
+//           )
+
+// ;
+//         },
+//       ),
 
             ],
           ),

@@ -1,52 +1,21 @@
-import 'package:flutter/material.dart';
+main() {
+  List<int> list = [1, 3, 2, 7, 4, 6, 5, 0, 9];
+int i=0;
+while(i<list.length-1){
+if(list[i]>list[i+1]){ // if uoy use < oprator then get reverse list
+int temp =list[i+1];
+list[i+1]=list[i];
+list[i]=temp;
 
-
-main(){
-  runApp(MaterialApp(home:Mywidget()));
+if(i>0){
+  i--;
 }
 
-class Mywidget extends StatefulWidget {
-  @override
-  State<Mywidget> createState() => _Mywidget();
+}else{
+  i++;
 }
+}
+print(list);
 
-class _Mywidget extends State<Mywidget> with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
-  late Animation<double> _animation;
-
-  @override
-  initState() {
-    super.initState();
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 10));
-
-    _animation = Tween<double>(begin: 1, end: .01).animate(_animationController);
-
-    _animationController.repeat(reverse: true);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: SafeArea(
-      child: AnimatedBuilder(
-        animation: _animationController,
-        builder: (context, child) {
-          print("build ${_animation.value}");
-          return Stack(
-            children: [
-              Positioned(
-                top:  _animation.value*500,
-                
-                            left: _animation.value*1000,// shows 70% height
-                child: Image.asset("assets/amarjeet.jpg"),
-              ),
-            ],
-          )
-
-;
-        },
-      ),
-    ));
-  }
+    //print(plainList);
 }

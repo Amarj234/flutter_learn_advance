@@ -1,16 +1,10 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:ado/screens/board_config/available_boards.dart';
-import 'package:ado/screens/board_config/wifi_ios.dart';
-import 'package:ado/screens/home/bloc/tab_bloc.dart';
-import 'package:ado/screens/home/bloc/tab_event.dart';
-import 'package:ado/screens/home/bloc/tab_state.dart';
-import 'package:ado/screens/home/home_screen.dart';
-import 'package:ado/screens/rooms/bloc/room_bloc.dart';
-import 'package:ado/screens/rooms/bloc/room_event.dart';
-import '../schedule/schedule_page.dart';
+import 'bloc/tab_bloc.dart';
+import 'bloc/tab_event.dart';
+import 'bloc/tab_state.dart';
+
 
 class StayBottomNavigationBar extends StatefulWidget {
   final int? index;
@@ -35,7 +29,7 @@ class _StayBottomNavigationBarState extends State<StayBottomNavigationBar> {
     if (widget.index != null) {
       context.read<TabBloc>().add(TabEvent.getTabs(widget.index!));
     }
-    BlocProvider.of<RoomBloc>(context).add(RoomEvent.getRooms());
+
   }
 
   Future<bool> _onWillPop() async {
@@ -124,6 +118,7 @@ class _StayBottomNavigationBarState extends State<StayBottomNavigationBar> {
   }
 }
 
+
 // Dummy Settings Page for example
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -133,6 +128,44 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Settings")),
       body: const Center(child: Text("Settings Page")),
+    );
+  }
+}
+
+
+class SchedulePage extends StatelessWidget {
+  const SchedulePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("SchedulePage")),
+      body: const Center(child: Text("SchedulePage Page")),
+    );
+  }
+}
+
+
+class AvailableDevices extends StatelessWidget {
+  const AvailableDevices({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("AvailableDevices")),
+      body: const Center(child: Text("AvailableDevices Page")),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("HomeScreen")),
+      body: const Center(child: Text("HomeScreen Page")),
     );
   }
 }

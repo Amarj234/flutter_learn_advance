@@ -1,5 +1,10 @@
 {
   "@@locale": "hi",
   "hello": "नमस्ते",
-  "welcome": "हमारे ऐप में आपका स्वागत है"
+  "welcome": "ऐप में आपका स्वागत है",
+  "goodMorning": "सुप्रभात",
+  "changeLanguage": "भाषा बदलें हिन्दी",
+  "selectLanguage": "एक भाषा चुनें",
+  "logout": "लॉग आउट",
+  "confirmLogout": "क्या आप वाकई लॉग आउट करना चाहते हैं?"
 }

@@ -65,13 +65,53 @@ class MyHomePage extends StatelessWidget {
               }
             },
             itemBuilder: (context) => [
-              const PopupMenuItem(value: 'en', child: Text('English')),
-              const PopupMenuItem(value: 'hi', child: Text('हिन्दी')),
+              PopupMenuItem(value: 'en', child: Text("Change English" + " 🇬🇧")),
+              PopupMenuItem(value: 'hi', child: Text("भाषा बदलें हिन्दी" + " 🇮🇳")),
             ],
           ),
         ],
       ),
-      body: Center(child: Text(loc.welcome)),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(loc.welcome, style: Theme.of(context).textTheme.headlineMedium),
+              const SizedBox(height: 16),
+              Text(loc.goodMorning, style: Theme.of(context).textTheme.titleLarge),
+              const SizedBox(height: 32),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.logout),
+                label: Text(loc.logout),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (_) => AlertDialog(
+                      title: Text(loc.logout),
+                      content: Text(loc.confirmLogout),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text("Cancel"),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                            // Your logout logic
+                          },
+                          child: const Text("OK"),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

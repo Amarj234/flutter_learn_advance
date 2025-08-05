@@ -12,5 +12,20 @@ class AppLocalizationsHi extends AppLocalizations {
   String get hello => 'नमस्ते';
 
   @override
-  String get welcome => 'हमारे ऐप में आपका स्वागत है';
+  String get welcome => 'ऐप में आपका स्वागत है';
+
+  @override
+  String get goodMorning => 'सुप्रभात';
+
+  @override
+  String get changeLanguage => 'भाषा बदलें हिन्दी';
+
+  @override
+  String get selectLanguage => 'एक भाषा चुनें';
+
+  @override
+  String get logout => 'लॉग आउट';
+
+  @override
+  String get confirmLogout => 'क्या आप वाकई लॉग आउट करना चाहते हैं?';
 }

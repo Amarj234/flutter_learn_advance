@@ -1,5 +1,10 @@
 {
   "@@locale": "en",
   "hello": "Hello",
-  "welcome": "Welcome to our app"
+  "welcome": "Welcome to the app",
+  "goodMorning": "Good morning",
+  "changeLanguage": "Change English",
+  "selectLanguage": "Select a language",
+  "logout": "Logout",
+  "confirmLogout": "Are you sure you want to logout?"
 }

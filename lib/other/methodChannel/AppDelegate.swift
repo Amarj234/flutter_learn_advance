@@ -16,6 +16,9 @@ let battryChannel= FlutterMethodChannel(name
 battryChannel.setMethodCallHandler({
     (call:FluuterMethodCall,result:@escaping FlutterResult)-> Void in
 if call.method=="getBatteryLevel"{
+    //     guard let args = call.arguments as? [String: Any],
+    //     let ssid = args["ssid"] as? String, // if you pass any perameter from flutter side you can get here
+
     self.receiveBatteryLevel(result:result)
 }else{
     result(FlutterMethodNotImplemented)

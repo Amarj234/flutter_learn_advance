@@ -51,6 +51,8 @@ dependencies:
 
 
 dev_dependencies:
+  flutter_localizations: # "flutter gen-l10n" run this for generate localization
+    sdk: flutter  # ✅ MUST specify sdk: flutter
   flutter_test:
     sdk: flutter
   build_runner: ^2.4.11
@@ -68,6 +70,11 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
+
+
+
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -82,6 +89,7 @@ flutter:
     - assets/amarjeet.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
+
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/to/asset-from-package

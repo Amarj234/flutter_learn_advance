@@ -20,6 +20,8 @@ MethodChannel(flutterEngine.dartExecutor.binaryMessenger,CHANNEL).setMethodCallH
     call,result->
 
     if(call.method=="getBatteryLevel"){
+
+        //  val ssid = call.argument<String>("ssid")!! // if you pass any perameter from flutter you can get here
         val batteryLevel=getBatteryLavel()
 
         if(batteryLavel !=-1){

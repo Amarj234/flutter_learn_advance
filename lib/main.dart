@@ -2,8 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_more/api/api_retry.dart';
 import 'package:learn_more/other/route/app_routes.dart';
-import 'other/custom_rander_box/render_widget.dart';
-import "dart:math"as math;
+
 
 void main() => runApp(const MyApp());
 
@@ -50,6 +49,8 @@ class MyAppData extends InheritedWidget {
 
   @override
   bool updateShouldNotify(MyAppData oldWidget) {
+
+
     return notifier != oldWidget.notifier;
 
   }

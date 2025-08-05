@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:learn_more/api/my_result.dart';
+//import 'package:learn_more/api/my_result.dart';
 part 'bloc_state.freezed.dart';
 
 // @freezed

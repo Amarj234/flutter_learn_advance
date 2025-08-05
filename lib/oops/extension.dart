@@ -13,7 +13,7 @@ extension PersonExtension on Person {
   bool get isAdult => age >= 18;
   bool get another {
     String anotherValue = "Amar";
-    return this == anotherValue;
+    return anotherValue == this;
   }
 }
 

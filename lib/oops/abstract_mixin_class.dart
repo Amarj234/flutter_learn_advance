@@ -35,6 +35,7 @@ mixin MyOtherMixin on ClassWithAbstractMixin {
 
 mixin MyOtherMixin2 on ClassWithAbstractMixin, AbstractMixin , MyMixin { // This mixin can be used with ClassWithAbstractMixin, AbstractMixin, or MyMixin
   // This mixin can be used with ClassWithAbstractMixin, AbstractMixin, or My
+  @override
   void mixinMethod() {
     print('Mixin method in MyOtherMixin');
   }

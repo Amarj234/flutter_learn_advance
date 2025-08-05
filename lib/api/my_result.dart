@@ -30,7 +30,6 @@ class MyResult<T> {
     return MyResult._(state, value, error);
   }
 
-  @override
   List<Object?> get props => [value, state, error];
 }
 

@@ -66,7 +66,7 @@ class MyHomePage extends StatelessWidget {
             },
             itemBuilder: (context) => [
               PopupMenuItem(value: 'en', child: Text("Change English" + " 🇬🇧")),
-              PopupMenuItem(value: 'hi', child: Text("भाषा बदलें हिन्दी" + " 🇮🇳")),
+              PopupMenuItem(value: 'hi', child: Text("बदलें हिन्दी" + " 🇮🇳")),
             ],
           ),
         ],

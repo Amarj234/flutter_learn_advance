@@ -8,6 +8,8 @@ void main() {
 }
 
 class AnimationDemoPage extends StatefulWidget {
+  const AnimationDemoPage({super.key});
+
   @override
   _AnimationDemoPageState createState() => _AnimationDemoPageState();
 }

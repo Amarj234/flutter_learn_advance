@@ -229,7 +229,6 @@ class AdvancedColorPainter extends CustomPainter {
       ..isAntiAlias = false; // Better performance for pixelated look
 
     final pixelRect = Rect.fromLTWH(0, 0, pixelSize, pixelSize);
-    final matrix4 = Matrix4.identity();
     final rects = <Rect>[];
     final colors = <Color>[];
 

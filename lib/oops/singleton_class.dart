@@ -24,7 +24,7 @@ void main() {
   SingletonClass singleton1 = SingletonClass();
   SingletonClass singleton2 = SingletonClass();
 
-  SingletonClass singleton3 = SingletonClass._instance; // This will cause an error if uncommented
+ // SingletonClass singleton3 = SingletonClass._instance; // This will cause an error if uncommented
 
   // Both instances should be the same
   print(identical(singleton1, singleton2)); // true

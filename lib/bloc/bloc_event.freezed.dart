@@ -124,21 +124,21 @@ class __$$InitialImplCopyWithImpl<$Res>
 class _$InitialImpl extends Initial {
   const _$InitialImpl() : super._();
 
-  @override
+  
   String toString() {
     return 'BlocEvent.initial()';
   }
 
-  @override
+  
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
-  @override
+  
   int get hashCode => runtimeType.hashCode;
 
-  @override
+  
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -151,7 +151,7 @@ class _$InitialImpl extends Initial {
     return initial();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -164,7 +164,7 @@ class _$InitialImpl extends Initial {
     return initial?.call();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -181,7 +181,7 @@ class _$InitialImpl extends Initial {
     return orElse();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
@@ -194,7 +194,6 @@ class _$InitialImpl extends Initial {
     return initial(this);
   }
 
-  @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
@@ -207,7 +206,7 @@ class _$InitialImpl extends Initial {
     return initial?.call(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
@@ -253,21 +252,21 @@ class __$$LoadImplCopyWithImpl<$Res>
 class _$LoadImpl extends Load {
   const _$LoadImpl() : super._();
 
-  @override
+  
   String toString() {
     return 'BlocEvent.load()';
   }
 
-  @override
+  
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$LoadImpl);
   }
 
-  @override
+  
   int get hashCode => runtimeType.hashCode;
 
-  @override
+  
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -280,7 +279,7 @@ class _$LoadImpl extends Load {
     return load();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -293,7 +292,7 @@ class _$LoadImpl extends Load {
     return load?.call();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -310,7 +309,7 @@ class _$LoadImpl extends Load {
     return orElse();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
@@ -323,7 +322,7 @@ class _$LoadImpl extends Load {
     return load(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
@@ -336,7 +335,7 @@ class _$LoadImpl extends Load {
     return load?.call(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
@@ -377,7 +376,7 @@ class __$$AddImplCopyWithImpl<$Res>
   /// Create a copy of BlocEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
+  
   $Res call({
     Object? text = null,
   }) {
@@ -395,15 +394,15 @@ class __$$AddImplCopyWithImpl<$Res>
 class _$AddImpl extends Add {
   const _$AddImpl(this.text) : super._();
 
-  @override
+  
   final String text;
 
-  @override
+  
   String toString() {
     return 'BlocEvent.add(text: $text)';
   }
 
-  @override
+  
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
@@ -411,18 +410,18 @@ class _$AddImpl extends Add {
             (identical(other.text, text) || other.text == text));
   }
 
-  @override
+  
   int get hashCode => Object.hash(runtimeType, text);
 
   /// Create a copy of BlocEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
+  
   @pragma('vm:prefer-inline')
   _$$AddImplCopyWith<_$AddImpl> get copyWith =>
       __$$AddImplCopyWithImpl<_$AddImpl>(this, _$identity);
 
-  @override
+  
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -435,7 +434,7 @@ class _$AddImpl extends Add {
     return add(text);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -448,7 +447,7 @@ class _$AddImpl extends Add {
     return add?.call(text);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -465,7 +464,7 @@ class _$AddImpl extends Add {
     return orElse();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
@@ -478,7 +477,7 @@ class _$AddImpl extends Add {
     return add(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
@@ -491,7 +490,7 @@ class _$AddImpl extends Add {
     return add?.call(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
@@ -542,7 +541,7 @@ class __$$RemoveImplCopyWithImpl<$Res>
   /// Create a copy of BlocEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
+  
   $Res call({
     Object? index = null,
   }) {
@@ -560,15 +559,15 @@ class __$$RemoveImplCopyWithImpl<$Res>
 class _$RemoveImpl extends Remove {
   const _$RemoveImpl(this.index) : super._();
 
-  @override
+  
   final int index;
 
-  @override
+  
   String toString() {
     return 'BlocEvent.remove(index: $index)';
   }
 
-  @override
+  
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
@@ -576,18 +575,18 @@ class _$RemoveImpl extends Remove {
             (identical(other.index, index) || other.index == index));
   }
 
-  @override
+  
   int get hashCode => Object.hash(runtimeType, index);
 
   /// Create a copy of BlocEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
+  
   @pragma('vm:prefer-inline')
   _$$RemoveImplCopyWith<_$RemoveImpl> get copyWith =>
       __$$RemoveImplCopyWithImpl<_$RemoveImpl>(this, _$identity);
 
-  @override
+  
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -600,7 +599,7 @@ class _$RemoveImpl extends Remove {
     return remove(index);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -613,7 +612,7 @@ class _$RemoveImpl extends Remove {
     return remove?.call(index);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -630,7 +629,7 @@ class _$RemoveImpl extends Remove {
     return orElse();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
@@ -643,7 +642,7 @@ class _$RemoveImpl extends Remove {
     return remove(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
@@ -656,7 +655,7 @@ class _$RemoveImpl extends Remove {
     return remove?.call(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
@@ -707,7 +706,7 @@ class __$$UpdateImplCopyWithImpl<$Res>
   /// Create a copy of BlocEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
+  
   $Res call({
     Object? index = null,
     Object? text = null,
@@ -730,17 +729,17 @@ class __$$UpdateImplCopyWithImpl<$Res>
 class _$UpdateImpl extends Update {
   const _$UpdateImpl(this.index, this.text) : super._();
 
-  @override
+  
   final int index;
-  @override
+  
   final String text;
 
-  @override
+  
   String toString() {
     return 'BlocEvent.update(index: $index, text: $text)';
   }
 
-  @override
+  
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
@@ -749,18 +748,18 @@ class _$UpdateImpl extends Update {
             (identical(other.text, text) || other.text == text));
   }
 
-  @override
+  
   int get hashCode => Object.hash(runtimeType, index, text);
 
   /// Create a copy of BlocEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
+  
   @pragma('vm:prefer-inline')
   _$$UpdateImplCopyWith<_$UpdateImpl> get copyWith =>
       __$$UpdateImplCopyWithImpl<_$UpdateImpl>(this, _$identity);
 
-  @override
+  
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -773,7 +772,7 @@ class _$UpdateImpl extends Update {
     return update(index, text);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -786,7 +785,7 @@ class _$UpdateImpl extends Update {
     return update?.call(index, text);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -803,7 +802,7 @@ class _$UpdateImpl extends Update {
     return orElse();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
@@ -816,7 +815,7 @@ class _$UpdateImpl extends Update {
     return update(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
@@ -829,7 +828,7 @@ class _$UpdateImpl extends Update {
     return update?.call(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
@@ -885,21 +884,21 @@ class __$$ClearImplCopyWithImpl<$Res>
 class _$ClearImpl extends Clear {
   const _$ClearImpl() : super._();
 
-  @override
+  
   String toString() {
     return 'BlocEvent.clear()';
   }
 
-  @override
+  
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$ClearImpl);
   }
 
-  @override
+  
   int get hashCode => runtimeType.hashCode;
 
-  @override
+  
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -912,7 +911,7 @@ class _$ClearImpl extends Clear {
     return clear();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
@@ -925,7 +924,7 @@ class _$ClearImpl extends Clear {
     return clear?.call();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
@@ -942,7 +941,7 @@ class _$ClearImpl extends Clear {
     return orElse();
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
@@ -955,7 +954,7 @@ class _$ClearImpl extends Clear {
     return clear(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
@@ -968,7 +967,7 @@ class _$ClearImpl extends Clear {
     return clear?.call(this);
   }
 
-  @override
+  
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,

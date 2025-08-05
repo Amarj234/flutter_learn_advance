@@ -68,7 +68,6 @@ class MyHomePage extends StatelessWidget {
         child: AnimatedBuilder(
           animation: notifier,
           builder: (context, _) {
-
             return Text('Counter: ${notifier.counter}');
           },
         ),

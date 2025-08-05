@@ -84,7 +84,7 @@ class MyHomePage extends StatelessWidget {
               const SizedBox(height: 32),
               ElevatedButton.icon(
                 icon: const Icon(Icons.logout),
-                label: Text(loc.logout),
+                label: Text(loc.logout.toString()),
                 onPressed: () {
                   showDialog(
                     context: context,

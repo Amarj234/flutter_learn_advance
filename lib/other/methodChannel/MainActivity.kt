@@ -13,7 +13,7 @@ class MainActivity:FlutterActivity(){
     private val CHANNEL="simpleflutter.battery"
 
 
-    override fin configureFlutterEngine(flutterEngine:FlutterEngine){
+    override fun configureFlutterEngine(flutterEngine:FlutterEngine){
         super.configureFlutterEngine(flutterEngine)
 
 MethodChannel(flutterEngine.dartExecutor.binaryMessenger,CHANNEL).setMethodCallHandler{

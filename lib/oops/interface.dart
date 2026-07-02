@@ -57,3 +57,16 @@ class F extends E{
 
   // no need to implements any method here if we use extends
 }
+class G{
+
+  methodG(){}
+}
+
+class H implements G{
+  @override
+  methodG() {
+    // TODO: implement methodG
+    throw UnimplementedError();
+  }
+
+}

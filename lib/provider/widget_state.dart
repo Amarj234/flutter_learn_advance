@@ -30,6 +30,7 @@ class _WidgetStateState extends State<WidgetState> {
 
           //we can also use   BuildProvider<UserProvider>(
           child: Consumer<ProviderClass>(
+            
             builder: (context, provider, child) {
               final state = provider.state;
               return state.when(

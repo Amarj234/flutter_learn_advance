@@ -47,6 +47,7 @@ dependencies:
   go_router:
   get_it: ^8.0.3
   equatable: ^2.0.5
+  shared_preferences:
 
 
 

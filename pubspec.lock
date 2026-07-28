@@ -251,6 +251,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_mobx:
+    dependency: "direct main"
+    description:
+      name: flutter_mobx
+      sha256: ba5e93467866a2991259dc51cffd41ef45f695c667c2b8e7b087bf24118b50fe
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
   flutter_riverpod:
     dependency: "direct main"
     description:
@@ -485,6 +493,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  mobx:
+    dependency: "direct main"
+    description:
+      name: mobx
+      sha256: "25ea9a3ee69243d578fb6288721d8eeb18550d0391c32f896d377d994154bff2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.0"
+  mobx_codegen:
+    dependency: "direct dev"
+    description:
+      name: mobx_codegen
+      sha256: "990da80722f7d7c0017dec92040b31545d625b15d40204c36a1e63d167c73cdc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.7.0"
   nested:
     dependency: transitive
     description:
@@ -698,6 +722,22 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  socket_io_client:
+    dependency: "direct main"
+    description:
+      name: socket_io_client
+      sha256: f5990ff303d385e7b2150f0e57cca097a8d20c6a2ae0a22cb2d496661ea8ed9b
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.6"
+  socket_io_common:
+    dependency: transitive
+    description:
+      name: socket_io_common
+      sha256: "162fbaecbf4bf9a9372a62a341b3550b51dcef2f02f3e5830a297fd48203d45b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.1"
   source_gen:
     dependency: transitive
     description:

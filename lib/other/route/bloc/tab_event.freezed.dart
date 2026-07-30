@@ -1,4 +1,3 @@
-// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -10,133 +9,212 @@ part of 'tab_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+
 /// @nodoc
 mixin _$TabEvent {
+  int get index => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) getTabs,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? getTabs,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? getTabs,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetTabsEvent value) getTabs,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetTabsEvent value)? getTabs,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetTabsEvent value)? getTabs,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
- int get index;
-/// Create a copy of TabEvent
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$TabEventCopyWith<TabEvent> get copyWith => _$TabEventCopyWithImpl<TabEvent>(this as TabEvent, _$identity);
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TabEvent&&(identical(other.index, index) || other.index == index));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,index);
-
-@override
-String toString() {
-  return 'TabEvent(index: $index)';
-}
-
-
+  @JsonKey(ignore: true)
+  $TabEventCopyWith<TabEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $TabEventCopyWith<$Res>  {
-  factory $TabEventCopyWith(TabEvent value, $Res Function(TabEvent) _then) = _$TabEventCopyWithImpl;
-@useResult
-$Res call({
- int index
-});
-
-
-
-
+abstract class $TabEventCopyWith<$Res> {
+  factory $TabEventCopyWith(TabEvent value, $Res Function(TabEvent) then) =
+      _$TabEventCopyWithImpl<$Res, TabEvent>;
+  @useResult
+  $Res call({int index});
 }
+
 /// @nodoc
-class _$TabEventCopyWithImpl<$Res>
+class _$TabEventCopyWithImpl<$Res, $Val extends TabEvent>
     implements $TabEventCopyWith<$Res> {
-  _$TabEventCopyWithImpl(this._self, this._then);
+  _$TabEventCopyWithImpl(this._value, this._then);
 
-  final TabEvent _self;
-  final $Res Function(TabEvent) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of TabEvent
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? index = null,}) {
-  return _then(_self.copyWith(
-index: null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
-}
-
-}
-
-
-/// @nodoc
-
-
-class GetTabsEvent extends TabEvent {
-  const GetTabsEvent(this.index): super._();
-  
-
-@override final  int index;
-
-/// Create a copy of TabEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$GetTabsEventCopyWith<GetTabsEvent> get copyWith => _$GetTabsEventCopyWithImpl<GetTabsEvent>(this, _$identity);
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is GetTabsEvent&&(identical(other.index, index) || other.index == index));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,index);
-
-@override
-String toString() {
-  return 'TabEvent.getTabs(index: $index)';
-}
-
-
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_value.copyWith(
+      index: null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract mixin class $GetTabsEventCopyWith<$Res> implements $TabEventCopyWith<$Res> {
-  factory $GetTabsEventCopyWith(GetTabsEvent value, $Res Function(GetTabsEvent) _then) = _$GetTabsEventCopyWithImpl;
-@override @useResult
-$Res call({
- int index
-});
-
-
-
-
+abstract class _$$GetTabsEventImplCopyWith<$Res>
+    implements $TabEventCopyWith<$Res> {
+  factory _$$GetTabsEventImplCopyWith(
+          _$GetTabsEventImpl value, $Res Function(_$GetTabsEventImpl) then) =
+      __$$GetTabsEventImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int index});
 }
+
 /// @nodoc
-class _$GetTabsEventCopyWithImpl<$Res>
-    implements $GetTabsEventCopyWith<$Res> {
-  _$GetTabsEventCopyWithImpl(this._self, this._then);
+class __$$GetTabsEventImplCopyWithImpl<$Res>
+    extends _$TabEventCopyWithImpl<$Res, _$GetTabsEventImpl>
+    implements _$$GetTabsEventImplCopyWith<$Res> {
+  __$$GetTabsEventImplCopyWithImpl(
+      _$GetTabsEventImpl _value, $Res Function(_$GetTabsEventImpl) _then)
+      : super(_value, _then);
 
-  final GetTabsEvent _self;
-  final $Res Function(GetTabsEvent) _then;
-
-/// Create a copy of TabEvent
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? index = null,}) {
-  return _then(GetTabsEvent(
-null == index ? _self.index : index // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$GetTabsEventImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
+/// @nodoc
 
+class _$GetTabsEventImpl extends GetTabsEvent {
+  const _$GetTabsEventImpl(this.index) : super._();
+
+  @override
+  final int index;
+
+  @override
+  String toString() {
+    return 'TabEvent.getTabs(index: $index)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetTabsEventImpl &&
+            (identical(other.index, index) || other.index == index));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetTabsEventImplCopyWith<_$GetTabsEventImpl> get copyWith =>
+      __$$GetTabsEventImplCopyWithImpl<_$GetTabsEventImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) getTabs,
+  }) {
+    return getTabs(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? getTabs,
+  }) {
+    return getTabs?.call(index);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? getTabs,
+    required TResult orElse(),
+  }) {
+    if (getTabs != null) {
+      return getTabs(index);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetTabsEvent value) getTabs,
+  }) {
+    return getTabs(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetTabsEvent value)? getTabs,
+  }) {
+    return getTabs?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetTabsEvent value)? getTabs,
+    required TResult orElse(),
+  }) {
+    if (getTabs != null) {
+      return getTabs(this);
+    }
+    return orElse();
+  }
 }
 
-// dart format on
+abstract class GetTabsEvent extends TabEvent {
+  const factory GetTabsEvent(final int index) = _$GetTabsEventImpl;
+  const GetTabsEvent._() : super._();
+
+  @override
+  int get index;
+  @override
+  @JsonKey(ignore: true)
+  _$$GetTabsEventImplCopyWith<_$GetTabsEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

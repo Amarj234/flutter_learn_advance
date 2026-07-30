@@ -1,4 +1,3 @@
-// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -10,133 +9,125 @@ part of 'tab_state.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+
 /// @nodoc
 mixin _$TabState {
+  int get currentIndex => throw _privateConstructorUsedError;
 
- int get currentIndex;
-/// Create a copy of TabState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$TabStateCopyWith<TabState> get copyWith => _$TabStateCopyWithImpl<TabState>(this as TabState, _$identity);
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TabState&&(identical(other.currentIndex, currentIndex) || other.currentIndex == currentIndex));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,currentIndex);
-
-@override
-String toString() {
-  return 'TabState(currentIndex: $currentIndex)';
-}
-
-
+  @JsonKey(ignore: true)
+  $TabStateCopyWith<TabState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $TabStateCopyWith<$Res>  {
-  factory $TabStateCopyWith(TabState value, $Res Function(TabState) _then) = _$TabStateCopyWithImpl;
-@useResult
-$Res call({
- int currentIndex
-});
-
-
-
-
+abstract class $TabStateCopyWith<$Res> {
+  factory $TabStateCopyWith(TabState value, $Res Function(TabState) then) =
+      _$TabStateCopyWithImpl<$Res, TabState>;
+  @useResult
+  $Res call({int currentIndex});
 }
+
 /// @nodoc
-class _$TabStateCopyWithImpl<$Res>
+class _$TabStateCopyWithImpl<$Res, $Val extends TabState>
     implements $TabStateCopyWith<$Res> {
-  _$TabStateCopyWithImpl(this._self, this._then);
+  _$TabStateCopyWithImpl(this._value, this._then);
 
-  final TabState _self;
-  final $Res Function(TabState) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of TabState
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? currentIndex = null,}) {
-  return _then(_self.copyWith(
-currentIndex: null == currentIndex ? _self.currentIndex : currentIndex // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
-}
-
-}
-
-
-/// @nodoc
-
-
-class _TabState implements TabState {
-   _TabState({this.currentIndex = 0});
-  
-
-@override@JsonKey() final  int currentIndex;
-
-/// Create a copy of TabState
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$TabStateCopyWith<_TabState> get copyWith => __$TabStateCopyWithImpl<_TabState>(this, _$identity);
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TabState&&(identical(other.currentIndex, currentIndex) || other.currentIndex == currentIndex));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,currentIndex);
-
-@override
-String toString() {
-  return 'TabState(currentIndex: $currentIndex)';
-}
-
-
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currentIndex = null,
+  }) {
+    return _then(_value.copyWith(
+      currentIndex: null == currentIndex
+          ? _value.currentIndex
+          : currentIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract mixin class _$TabStateCopyWith<$Res> implements $TabStateCopyWith<$Res> {
-  factory _$TabStateCopyWith(_TabState value, $Res Function(_TabState) _then) = __$TabStateCopyWithImpl;
-@override @useResult
-$Res call({
- int currentIndex
-});
-
-
-
-
+abstract class _$$TabStateImplCopyWith<$Res>
+    implements $TabStateCopyWith<$Res> {
+  factory _$$TabStateImplCopyWith(
+          _$TabStateImpl value, $Res Function(_$TabStateImpl) then) =
+      __$$TabStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int currentIndex});
 }
+
 /// @nodoc
-class __$TabStateCopyWithImpl<$Res>
-    implements _$TabStateCopyWith<$Res> {
-  __$TabStateCopyWithImpl(this._self, this._then);
+class __$$TabStateImplCopyWithImpl<$Res>
+    extends _$TabStateCopyWithImpl<$Res, _$TabStateImpl>
+    implements _$$TabStateImplCopyWith<$Res> {
+  __$$TabStateImplCopyWithImpl(
+      _$TabStateImpl _value, $Res Function(_$TabStateImpl) _then)
+      : super(_value, _then);
 
-  final _TabState _self;
-  final $Res Function(_TabState) _then;
-
-/// Create a copy of TabState
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? currentIndex = null,}) {
-  return _then(_TabState(
-currentIndex: null == currentIndex ? _self.currentIndex : currentIndex // ignore: cast_nullable_to_non_nullable
-as int,
-  ));
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currentIndex = null,
+  }) {
+    return _then(_$TabStateImpl(
+      currentIndex: null == currentIndex
+          ? _value.currentIndex
+          : currentIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
+/// @nodoc
 
+class _$TabStateImpl implements _TabState {
+  _$TabStateImpl({this.currentIndex = 0});
+
+  @override
+  @JsonKey()
+  final int currentIndex;
+
+  @override
+  String toString() {
+    return 'TabState(currentIndex: $currentIndex)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TabStateImpl &&
+            (identical(other.currentIndex, currentIndex) ||
+                other.currentIndex == currentIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, currentIndex);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TabStateImplCopyWith<_$TabStateImpl> get copyWith =>
+      __$$TabStateImplCopyWithImpl<_$TabStateImpl>(this, _$identity);
 }
 
-// dart format on
+abstract class _TabState implements TabState {
+  factory _TabState({final int currentIndex}) = _$TabStateImpl;
+
+  @override
+  int get currentIndex;
+  @override
+  @JsonKey(ignore: true)
+  _$$TabStateImplCopyWith<_$TabStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

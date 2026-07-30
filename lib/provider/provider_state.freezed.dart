@@ -85,9 +85,6 @@ class _$ProviderStateCopyWithImpl<$Res, $Val extends ProviderState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ProviderState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -104,9 +101,6 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ProviderState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -226,8 +220,6 @@ class __$$SuccessImplCopyWithImpl<$Res>
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProviderState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -286,9 +278,7 @@ class _$SuccessImpl extends _Success {
   @override
   int get hashCode => Object.hash(runtimeType, name, email, phone);
 
-  /// Create a copy of ProviderState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
@@ -380,10 +370,7 @@ abstract class _Success extends ProviderState {
   String? get name;
   String? get email;
   String? get phone;
-
-  /// Create a copy of ProviderState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -405,8 +392,6 @@ class __$$FailureImplCopyWithImpl<$Res>
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ProviderState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -445,9 +430,7 @@ class _$FailureImpl extends _Failure {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ProviderState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
@@ -534,10 +517,7 @@ abstract class _Failure extends ProviderState {
   const _Failure._() : super._();
 
   String? get error;
-
-  /// Create a copy of ProviderState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -556,9 +536,6 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ProviderState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

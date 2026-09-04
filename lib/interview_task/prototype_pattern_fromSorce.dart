@@ -16,8 +16,8 @@ class UIElement extends GraphicsElement{
 
   UIElement.fromSource(UIElement source):
         lable=source.lable,
-        permissions=source.permissions,
-        super(x:source.x,y:source.y,color:source.color);
+        permissions = List<String>.from(source.permissions),
+      super(x:source.x,y:source.y,color:source.color);
 
   @override
   GraphicsElement clone() {

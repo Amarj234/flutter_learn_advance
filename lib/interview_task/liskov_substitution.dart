@@ -32,4 +32,5 @@ main(){
   worker.work();
   worker =RoboticWorker();
   worker.work();
+  (robot as HumanWorker).eat(); 
 }
